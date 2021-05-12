@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Access Bars | zannabirgit.dk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="apple-touch-icon" href="../../icon.png">
+
+  <!--  font links-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin">
+
+  <!--  css links-->
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/main.css">
+
+  <!--  load fragments script-->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script>
+    $(function(){
+      $("#menu").load("../fragments/menu.html");
+      $("#footer").load("../fragments/footer.html");
+      $("#images").load("../fragments/images.html");
+    });
+  </script>
+</head>
+<body>
+
+<!--  menu-->
+<div id="menu" class="sticky"></div>
+
+<!--grid-->
+<div id="content">
+
+  <!--  image-->
+  <div class="div1" id="images"></div>
+
+  <!--  main-->
+  <div class="div2">
+    <h1>access bars tekst</h1>
+  </div>
+
+  <!--  aside-->
+  <div class="div3">
+    <p>ting ude til siden</p>
+  </div>
+
+  <!--  footer-->
+  <div class="div4">
+    <div id="footer"></div>
+  </div>
+
+</div>
+
+
+
+
+<!--scripts-->
+<script src="../../js/vendor/modernizr-3.11.2.min.js"></script>
+<script src="../../js/plugins.js"></script>
+<script src="../../js/main.js"></script>
+<script src="../../js/list.js"></script>
+
+</body>
+</html>
