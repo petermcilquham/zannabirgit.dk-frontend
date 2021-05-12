@@ -22,6 +22,12 @@ html {
   position: sticky;
   top: 0;
   text-align: center;
+  height: 200px;
+  /*border-bottom: solid 1px grey;*/
+}
+#menu > h1{
+  margin: 0;
+  color: red;
 }
 
 /*
