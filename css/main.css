@@ -18,12 +18,8 @@ html {
 }
 
 /*
-  * menu
+  * menu ******************************************
 */
-ul{
-  list-style: none;
-  padding: 0;
-}
 #menu{
   /*sætter menuen fast i toppen af skærmen*/
   position: sticky;
@@ -31,7 +27,7 @@ ul{
 
   background-color: white;
   height: 100px; /* menu højde */
-  border-bottom: solid 1px grey;
+  /*border-bottom: solid 1px grey;*/
 }
 #menu > #nav{
   /*centrerer teksten*/
@@ -42,9 +38,13 @@ ul{
   transform: translate(-50%, -50%);
   margin: auto;
 }
+#menu > #nav > ul, #menu > #nav > ul > li > ul{
+  list-style: none;
+  padding: 0;
+}
 #menu > #nav > ul > li{
   display: inline; /*gør listen horizontal i stedet for vertikal*/
-  margin-right: 20px; /* afstand imellem */
+  margin-right: 45px; /* afstand imellem */
   cursor: pointer;
   font-weight: bold;
   font-size: 0.85rem;
@@ -71,36 +71,12 @@ ul{
 .show {display:block;}
 
 /*
-  * grid
+  * footer ******************************************
 */
+#footer{
 
-#content{
-  clear: both;
-  display: grid;
-  height: 100vh;
-  width: 60%;
-  margin: auto;
-  justify-items: center;
-  grid-template-areas:
-    'image image image image image'
-    'main main main aside aside'
-    'footer footer footer footer footer';
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
 }
 
-#content > .div1{
-  grid-area: image;
-}
-#content > .div2{
-  grid-area: main;
-}
-#content > .div3{
-  grid-area: aside;
-}
-#content > .div4{
-  grid-area: footer;
-}
 
 /*
  * Remove text-shadow in selection highlight:
