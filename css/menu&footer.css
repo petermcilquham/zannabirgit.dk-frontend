@@ -1,0 +1,52 @@
+#menu{
+  /*sætter menuen fast i toppen af skærmen*/
+  position: sticky;
+  top: 0;
+
+  /*background-color: rgb(196, 216, 180);*/
+  background-color: rgb(188, 202, 139);
+  border-bottom: solid 1px #ccc;
+}
+#menu > #nav{
+  text-align: center;
+  padding: 20px 0;
+}
+#menu > #nav > ul, #menu > #nav > ul > li > ul{
+  list-style: none;
+  padding: 0;
+}
+#menu > #nav > ul > li{
+  display: inline; /*gør listen horizontal i stedet for vertikal*/
+  margin-right: 45px; /* afstand imellem */
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 0.85rem;
+  line-height: 2;
+  font-family: "Libre Franklin", helvetica, arial, sans-serif;
+}
+.dropbtn{
+  /*dette kode skal bruges i forhold til at positionere .dropdown-content*/
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content{
+  display: none;
+  position: absolute; /*får drop down content til at være under menuen*/
+  left: 0; /*får drop down content til at flugte med den venstre kant af behandlinger menupunktet*/
+  background-color: #f1f1f1;
+  min-width: 110px;
+  text-align: left;
+}
+.dropdown-content li{
+  padding: 10px 14px;
+  display: block;
+}
+.dropdown-content li:hover {background-color: #ddd;}
+.show {display:block;}
+
+
+/* ********************* footer ******************** */
+#footer{
+  margin-top:10px;
+  border-top: solid 1px #ccc;
+}

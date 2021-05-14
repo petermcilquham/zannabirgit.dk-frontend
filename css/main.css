@@ -15,68 +15,12 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
-}
-
-/*
-  * menu ******************************************
-*/
-#menu{
-  /*sætter menuen fast i toppen af skærmen*/
-  position: sticky;
-  top: 0;
-
-  background-color: white;
-  height: 100px; /* menu højde */
-  /*border-bottom: solid 1px grey;*/
-}
-#menu > #nav{
-  /*centrerer teksten*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: auto;
-}
-#menu > #nav > ul, #menu > #nav > ul > li > ul{
-  list-style: none;
-  padding: 0;
-}
-#menu > #nav > ul > li{
-  display: inline; /*gør listen horizontal i stedet for vertikal*/
-  margin-right: 45px; /* afstand imellem */
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.85rem;
-  line-height: 2;
   font-family: "Libre Franklin", helvetica, arial, sans-serif;
 }
-.dropbtn{
-  /*dette kode skal bruges i forhold til at positionere .dropdown-content*/
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content{
-  display: none;
-  position: absolute; /*får drop down content til at være under menuen*/
-  left: 0; /*får drop down content til at flugte med den venstre kant af behandlinger menupunktet*/
-  background-color: #f1f1f1;
-  min-width: 110px;
-}
-.dropdown-content li{
-  padding: 10px 14px;
-  display: block;
-}
-.dropdown-content li:hover {background-color: #ddd;}
-.show {display:block;}
 
-/*
-  * footer ******************************************
-*/
-#footer{
-
+div li{
+  padding: 10px 0;
 }
-
 
 /*
  * Remove text-shadow in selection highlight:

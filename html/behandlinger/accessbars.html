@@ -13,8 +13,9 @@
   <!--  css links-->
   <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="../../css/main.css">
-  <link rel="stylesheet" href="../../css/list.css">
   <link rel="stylesheet" href="../../css/grid.css">
+  <link rel="stylesheet" href="../../css/img-header.css">
+  <link rel="stylesheet" href="../../css/menu&footer.css">
 
   <!--  load fragments script-->
   <script
@@ -24,25 +25,25 @@
   </script>
   <script>
     $(function(){
+      $("#imgHeader").load("../fragments/images.html");
       $("#menu").load("../fragments/menu.html");
       $("#footer").load("../fragments/footer.html");
-      //$("#images").load("../fragments/images.html");
     });
   </script>
 </head>
 <body>
 
+<!--  image-->
+<div id="imgHeader"></div>
+
 <!--  menu-->
-<div id="menu" class="sticky"></div>
+<div id="menu"></div>
 
 <!--grid-->
 <div id="content">
 
-  <!--  image-->
-  <div class="div1" id="images"></div>
-
   <!--  main-->
-  <div class="div2">
+  <div class="div1">
     <h1>Access Bars</h1>
     <p>En Access Bars behandling er en blid berøring eller stimulering af 32 punkter på dit hoved. Punkterne er baner af energi, de kaldes Bars. Access kan oversættes til "adgang" altså adgang til energi baner.</p>
     <p>Hver energi bane relaterer sig til forskellige områder i dit liv, som f.eks.. kommunikation, penge, kontrol, krop, seksualitet, relationer, glæde, sorg, håb og drømme.</p>
@@ -60,7 +61,7 @@
   </div>
 
   <!--  aside-->
-  <div class="div3">
+  <div class="div2">
     <p>"Tilstrækkelig søvn, rigtig kost og gode tanker er lige så uundværlige for helbredet som luft, sol og vand"</p>
   </div>
 

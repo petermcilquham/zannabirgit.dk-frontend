@@ -1,59 +1,38 @@
 #content{
-  clear: both;
   display: grid;
-  height: 100vh;
   width: 60%;
-  margin: auto;
+  margin: 0 auto 100px;
   justify-items: center;
   grid-template-areas:
-    'image image image image image'
     'main main main aside aside';
   grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 200px 1fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 30px;
 }
-
 #content > .div1{
-  grid-area: image;
-
-  /*sætter billedet som baggrund = får det til at udfylde grid area'et som det skal*/
-  background: url("../img/zanna_img_1.jpg");
-  background-size: cover;
-
-  /*giver div'en en størrelse, ellers vises billedet helt småt eller slet ikke*/
-  width: 100%;
-  height: 168px;
-}
-#content > .div2{
   grid-area: main;
 }
-#content > .div3{
+#content > .div2{
   grid-area: aside;
   padding: 0 20px;
 }
 
 #footer{
   display: grid;
-  width: 60%;
   margin: auto;
   justify-items: center;
   align-items: center;
   grid-template-areas:
-    'rule rule'
     'img info';
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 20px 1fr;
+  grid-template-rows: 1fr;
   grid-column-gap: 100px;
 }
 #footer > .fdiv1{
-  grid-area: rule;
-  width: 100%;
-}
-#footer > .fdiv2{
   grid-area:img;
   justify-self: right;
 }
-#footer > .fdiv3{
+#footer > .fdiv2{
   grid-area:info;
   justify-self: left;
 }
