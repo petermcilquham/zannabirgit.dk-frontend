@@ -14,6 +14,7 @@ fetch(url, requestOption)
 
 function gotData(data) {
   data.forEach(addRow)
+  data.forEach(populateSelect)
 }
 
 function addRow(data) {
@@ -29,4 +30,9 @@ function addRow(data) {
 
   let cell3 = row.insertCell(2);
   cell3.innerHTML = data.serviceLength + " min.";
+}
+
+function populateSelect(data) {
+  var element = document.getElementById('serviceDropdown');
+  element.innerHTML = element.innerHTML + '<option value="' + data.serviceId + '">' + data.serviceName + '</option>';
 }
