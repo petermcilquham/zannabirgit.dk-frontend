@@ -25,6 +25,7 @@ function postFunction(inputValue){
     headers: {
       "Content-type": 'application/json',
       // "Access-Control-Allow-Headers": '*'
+      Accept: 'application/json'
     },
     method: 'POST',
     redirect: 'follow',
