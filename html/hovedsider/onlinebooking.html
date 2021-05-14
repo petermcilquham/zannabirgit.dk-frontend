@@ -42,6 +42,27 @@
   <!--  main-->
   <div class="div2">
     <h1>online booking</h1>
+    <div class="form-group">
+      <label for="service">Service ID</label>
+      <input type="text" class="form-control" id="service" name="service" required>
+    </div>
+
+    <div class="form-group">
+      <label for="customer">Customer ID</label>
+      <input type="tel" minlength="8" class="form-control" id="customer" name="customer" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bookingDate">Date</label>
+      <input type="date" class="form-control" id="bookingDate" name="bookingDate" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bookingTime">Time</label>
+      <input type="time" class="form-control" id="bookingTime" name="bookingTime" required>
+    </div>
+
+    <button class="btn btn-primary createBookingButton">Opret</button>
   </div>
 
   <!--  aside-->
