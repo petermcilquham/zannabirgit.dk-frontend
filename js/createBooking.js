@@ -10,31 +10,54 @@ createBookingBtn.onclick = function(){
     "serviceId": `${in1.value}`,
     "customerId": `${in2.value}`,
     "bookingDate": `${in3.value}`,
-    "bookingTime": `${in4.value + ":00"}`,
+    "bookingTime": `${in4.value}`,
   });
-  console.log(in4.value)
-  console.log(in3.value)
 }
 
-function postFunction(inputValue){
-  const url = "http://localhost:8080/bookings/create";
+function postFunction(inputValue) {
+  const bookingUrl = "http://localhost:8080/bookings/create";
 
   let requestBody = JSON.stringify(inputValue);
 
-  const requestOption = {
-    headers: {
-      "Content-type": 'application/json',
-      // "Access-Control-Allow-Headers": '*'
-      Accept: 'application/json'
-    },
+  const bookingRequestOption = {
     method: 'POST',
-    redirect: 'follow',
     body: requestBody,
-    mode: 'no-cors'
+    // mode: 'no-cors',
+    headers: {
+      'Content-type': 'application/json',
+      'Accept': 'application/json',
+      'Access-Control-Allow-Origin' : '*',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT,',
+      'Access-Control-Allow-Credentials' : true
+    },
   };
 
-  fetch(url, requestOption)
+  fetch(bookingUrl, bookingRequestOption)
     .then(response => response.json())
+    .catch(err => console.log(err))
+}
 
-  alert(console.log(requestBody))
+
+//Get services list
+const serviceUrl = "http://localhost:8080/services/all";
+
+const serviceRequestOption = {
+  headers: {
+    "Content-type": 'application/json'
+  },
+  method: 'GET',
+  redirect: 'follow'
+};
+
+fetch(serviceUrl, serviceRequestOption)
+  .then(response => response.json())
+  .then(data => gotData(data));
+
+function gotData(data) {
+  data.forEach(populateSelect)
+}
+
+function populateSelect(data) {
+  let element = document.getElementById('serviceDropdown');
+  element.innerHTML = element.innerHTML + '<option value="' + data.serviceId + '">' + data.serviceName + '</option>';
 }
