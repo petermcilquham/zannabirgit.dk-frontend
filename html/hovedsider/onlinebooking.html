@@ -45,11 +45,69 @@
   <!--  main-->
   <div class="div1">
     <h1>online booking</h1>
+    <div class="form-group">
+      <label for="serviceDropdown">Service</label>
+      <select name="serviceDropdown" id="serviceDropdown">
+        <option hidden selected disabled>Vælg en service</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <label for="customer">Customer ID</label>
+      <input type="number" class="form-control" id="customer" name="customer" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bookingDate">Date</label>
+      <input type="date" class="form-control" id="bookingDate" name="bookingDate" required>
+    </div>
+
+    <div class="form-group">
+      <label for="bookingTime">Time</label>
+      <input type="time" class="form-control" id="bookingTime" name="bookingTime" required>
+    </div>
+
+    <button class="btn btn-primary createBookingButton" id="createBookingButton">Opret</button>
+    <div>
+      <p>
+        Betingelser
+        <br>Jeg kan godt have flere ledige tider, som ikke fremgår af online bookingen - send en sms på 61183884 så finder vi en tid til dig.
+        <br><br>Udeblivelse og aflysning:
+        Vær opmærksom på, at der ved udeblivelse fra en tid, opkræves et gebyr på 300 kr. og at seneste tidspunkt for aflysning,
+        er 12 timer før din bookede tid. Bliver du forhindret og kender een der gerne vil overtage din tid så er det ok bare du giver besked.
+        <br><br>EMAIL OG SMS: Jeg accepterer at modtage bekræftelse og påmindelser på email og sms.
+        <br><br>AFBUD: Du finder et link til afbud i den bekræftelses-e-mail du modtager når du har booket tid.
+        <br><br>EMAIL OG SMS: Når du booker, accepterer du at modtage bekræftelse og påmindelser på email og sms.
+        <br><br>AFBUD: Du finder et link til afbud i den bekræftelses-e-mail du modtager når du har booket tid.
+      </p>
+    </div>
   </div>
 
   <!--  aside-->
   <div class="div2">
     <p>ting ude til siden</p>
+  <div class="div3">
+    <table class="table servicesTable">
+      <tr>
+        <th>Service</th>
+        <th>Pris</th>
+        <th>længde</th>
+      </tr>
+    </table>
+    <div style="text-align: center">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d8992.303470939032!2d12.585346!3d55.705053!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465252efb85fa8eb%3A0x288a29d1d5531261!2sSilkeborg%20Pl.%208%2C%20st.tv.%2C%202100%2C%202100%20K%C3%B8benhavn%2C%20Denmark!5e0!3m2!1sen!2sus!4v1620994914303!5m2!1sen!2sus" width="300" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+      <p>
+         Zoneterapi - Få fodfæste
+        <br>v/ Zanna Birgit Lyck
+        <br>Silkeborg Plads 8 st.tv.
+        <br>2100 København Ø
+        <br>
+        <br>Tlf.: 61183884
+        <br> Email: zannabirgit@hotmail.com
+        <br>Web: www.zannabirgit.dk
+        <br>CVR.: 27249264
+      </p>
+    </div>
   </div>
 
 </div>
@@ -65,6 +123,8 @@
 <script src="../../js/plugins.js"></script>
 <script src="../../js/main.js"></script>
 <script src="../../js/list.js"></script>
+<script src="../../js/getServicesList.js"></script>
+<script src="../../js/createBooking.js"></script>
 
 </body>
 </html>
