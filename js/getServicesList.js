@@ -33,6 +33,6 @@ function addRow(data) {
 }
 
 function populateSelect(data) {
-  var element = document.getElementById('serviceDropdown');
+  let element = document.getElementById('serviceDropdown');
   element.innerHTML = element.innerHTML + '<option value="' + data.serviceId + '">' + data.serviceName + '</option>';
 }

@@ -13,6 +13,9 @@
   <!--  css links-->
   <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/grid.css">
+  <link rel="stylesheet" href="../../css/img-header.css">
+  <link rel="stylesheet" href="../../css/menu&footer.css">
 
   <!--  load fragments script-->
   <script
@@ -22,39 +25,41 @@
   </script>
   <script>
     $(function(){
+      $("#imgHeader").load("../fragments/images.html");
       $("#menu").load("../fragments/menu.html");
       $("#footer").load("../fragments/footer.html");
-      $("#images").load("../fragments/images.html");
     });
   </script>
 </head>
 <body>
 
+<!--  image-->
+<div id="imgHeader"></div>
+
 <!--  menu-->
-<div id="menu" class="sticky"></div>
+<div id="menu"></div>
 
 <!--grid-->
 <div id="content">
 
-  <!--  image-->
-  <div class="div1" id="images"></div>
-
   <!--  main-->
-  <div class="div2">
-    <h1>healing</h1>
+  <div class="div1">
+    <h1>Healing</h1>
+    <p>Healing er en af verdens ældste behandlingsformer, der kendestegnes ved, at krop og sind hjælpes tilbage til indbyrdes balance og harmoni.</p>
+    <p>Healingsenergien er en blid dybdegående energi, som løsner op for de blokeringer og spændinger, der opstår når vi gennem længere tid overbelaster kroppen ved både fysisk og psykisk at undlade at gøre det, der er det rigtige for os. </p>
+    <p>Typisk undertrykker vi vores følelser, hvorfor vi selvfølgelig ovenpå en behandling skal være foreberedt på, at der dukker tidligere oplevelser op, som vi skal tage ansvar for, være villig til at rum og give omsorg til. </p>
+    <p>Der kan siges og skrives meget om healing - her har jeg dog valgt at gøre beskrivelsen kort - er du nysgerrig på det kan jeg kun anbefale at du prøver det af. Jeg laver også kombinationsbehandlinger, hvor jeg starter med healing og dernæst zoneterapi eller omvendt alt efter hvad vi aftaler. Det er min erfaring, at rigtig mange har stor glæde af denne kombination - det virker ekstra fordybende og giver en ro, der for mange af mine klienter føles usigeligt afstressende. </p>
   </div>
 
   <!--  aside-->
-  <div class="div3">
-    <p>ting ude til siden</p>
-  </div>
-
-  <!--  footer-->
-  <div class="div4">
-    <div id="footer"></div>
+  <div class="div2">
+    <p>"At lade sjælen komme til orde."</p>
   </div>
 
 </div>
+
+<!--  footer-->
+<div id="footer"></div>
 
 
 
@@ -63,7 +68,7 @@
 <script src="../../js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="../../js/plugins.js"></script>
 <script src="../../js/main.js"></script>
-<script src="../../js/list.js"></script>
+<script src="../../js/dropDownList-menu.js"></script>
 
 </body>
 </html>

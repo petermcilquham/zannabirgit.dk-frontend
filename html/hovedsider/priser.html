@@ -13,6 +13,10 @@
   <!--  css links-->
   <link rel="stylesheet" href="../../css/normalize.css">
   <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/grid.css">
+  <link rel="stylesheet" href="../../css/img-header.css">
+  <link rel="stylesheet" href="../../css/menu&footer.css">
+  <link rel="stylesheet" href="../../css/tables.css">
 
   <!--  load fragments script-->
   <script
@@ -22,37 +26,35 @@
   </script>
   <script>
     $(function(){
+      $("#imgHeader").load("../fragments/images.html");
       $("#menu").load("../fragments/menu.html");
       $("#footer").load("../fragments/footer.html");
-      $("#images").load("../fragments/images.html");
     });
   </script>
 </head>
 <body>
 
+<!--  image-->
+<div id="imgHeader"></div>
+
 <!--  menu-->
-<div id="menu" class="sticky"></div>
+<div id="menu"></div>
 
 <!--grid-->
 <div id="content">
 
-  <!--  image-->
-  <div class="div1" id="images"></div>
-
   <!--  main-->
-  <div class="div2">
-    <div class="container">
+  <div class="div1">
       <div class="container-fluid">
         <h1>Priser for 2021</h1>
-        <table class="table servicesTable">
+        <table class="table servicesTable priceTable">
           <tr>
-            <th>Service</th>
+            <th>Behandling</th>
             <th>Pris</th>
-            <th>længde</th>
+            <th>Længde</th>
           </tr>
         </table>
       </div>
-    </div>
     <br>Husk altid at afsætte lidt længere tid end selve behandlingen. Ofte er der brug for at udveksle informationer
     og måske også for en samtale med råd og vejledning.
     <br><br>
@@ -70,16 +72,12 @@
   </div>
 
   <!--  aside-->
-  <div class="div3">
-    <p>ting ude til siden</p>
-  </div>
-
-  <!--  footer-->
-  <div class="div4">
-    <div id="footer"></div>
-  </div>
+  <div class="div2"></div>
 
 </div>
+
+<!--  footer-->
+<div id="footer"></div>
 
 
 
@@ -88,7 +86,7 @@
 <script src="../../js/vendor/modernizr-3.11.2.min.js"></script>
 <script src="../../js/plugins.js"></script>
 <script src="../../js/main.js"></script>
-<script src="../../js/list.js"></script>
+<script src="../../js/dropDownList-menu.js"></script>
 <script src="../../js/getServicesList.js"></script>
 
 </body>

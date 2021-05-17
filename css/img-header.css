@@ -1,0 +1,49 @@
+#imgHeader{
+  height: 168px;
+  position: relative;
+}
+#imgHeader img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+
+  /*dette kode får billederne til at skifte*/
+  -webkit-animation-name: fade;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-duration: 100s; /* den totale animationslængde */
+  animation-name: fade;
+  animation-iteration-count: infinite;
+  animation-duration: 100s;
+}
+/* niks pille ellers fucker det hele op*/
+@-webkit-keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
+}
+@keyframes fade {
+  0% {opacity: 0;}
+  20% {opacity: 1;}
+  33% {opacity: 1;}
+  53% {opacity: 0;}
+  100% {opacity: 0;}
+}
+/*animation start for hvert enkelt billede - skal være inkrementer af den totale animatonslængde / antal billeder */
+#i1 {
+
+}
+#i2 {
+  -webkit-animation-delay: -80s;
+}
+#i3 {
+  -webkit-animation-delay: -60s;
+}
+#i4 {
+  -webkit-animation-delay: -40s;
+}
+#i5 {
+  -webkit-animation-delay: -20s;
+}
+

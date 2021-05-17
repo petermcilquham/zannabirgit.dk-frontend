@@ -15,91 +15,11 @@ html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
-}
-
-/*
-  * menu
-*/
-ul{
-  list-style: none;
-  padding: 0;
-}
-#menu{
-  /*sætter menuen fast i toppen af skærmen*/
-  position: sticky;
-  top: 0;
-
-  background-color: white;
-  height: 100px; /* menu højde */
-  border-bottom: solid 1px grey;
-}
-#menu > #nav{
-  /*centrerer teksten*/
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  margin: auto;
-}
-#menu > #nav > ul > li{
-  display: inline; /*gør listen horizontal i stedet for vertikal*/
-  margin-right: 20px; /* afstand imellem */
-  cursor: pointer;
-  font-weight: bold;
-  font-size: 0.85rem;
-  line-height: 2;
   font-family: "Libre Franklin", helvetica, arial, sans-serif;
 }
-.dropbtn{
-  /*dette kode skal bruges i forhold til at positionere .dropdown-content*/
-  position: relative;
-  display: inline-block;
-}
-.dropdown-content{
-  display: none;
-  position: absolute; /*får drop down content til at være under menuen*/
-  left: 0; /*får drop down content til at flugte med den venstre kant af behandlinger menupunktet*/
-  background-color: #f1f1f1;
-  min-width: 110px;
-}
-.dropdown-content li{
-  padding: 10px 14px;
-  display: block;
-}
-.dropdown-content li:hover {background-color: #ddd;}
-.show {display:block;}
 
-/*
-  * grid
-*/
-
-#content{
-  clear: both;
-  display: grid;
-  height: 100vh;
-  width: 60%;
-  margin: auto;
-  justify-items: center;
-  grid-template-areas:
-    'image image image image image'
-    'main main main aside aside'
-    'footer footer footer footer footer';
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-}
-
-#content > .div1{
-  grid-area: image;
-}
-#content > .div2{
-  grid-area: main;
-}
-#content > .div3{
-  grid-area: aside;
-}
-#content > .div4{
-  grid-area: footer;
+div li{
+  padding: 10px 0;
 }
 
 /*
