@@ -10,7 +10,7 @@ createBookingBtn.onclick = function(){
     "serviceId": `${in1.value}`,
     "customerId": `${in2.value}`,
     "bookingDate": `${in3.value}`,
-    "bookingTime": `${in4.value}`,
+    "bookingTime": `${in4.value + ":00"}`,
   });
 }
 
@@ -35,6 +35,7 @@ function postFunction(inputValue) {
   fetch(bookingUrl, bookingRequestOption)
     .then(response => response.json())
     .catch(err => console.log(err))
+  console.log(requestBody)
 }
 
 
