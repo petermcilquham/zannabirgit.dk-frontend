@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Booking | zannabirgit.dk</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="manifest" href="../../site.webmanifest">
+  <link rel="apple-touch-icon" href="../../icon.png">
+  <link href="../../css/calendar-imports.css" rel="stylesheet"/>
+  <!--  font links-->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Franklin">
+
+  <!--  css links-->
+  <link rel="stylesheet" href="../../css/normalize.css">
+  <link rel="stylesheet" href="../../css/main.css">
+  <link rel="stylesheet" href="../../css/grid.css">
+  <link rel="stylesheet" href="../../css/img-header.css">
+  <link rel="stylesheet" href="../../css/menu&footer.css">
+  <link rel="stylesheet" href="../../css/tables.css">
+  <link rel="stylesheet" href="../../css/booking&map.css">
+
+  <!--  load fragments script-->
+  <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous">
+  </script>
+  <script>
+    $(function(){
+      $("#imgHeader").load("../fragments/images.html");
+      $("#menu").load("../fragments/menu.html");
+      $("#footer").load("../fragments/footer.html");
+    });
+  </script>
+</head>
+<body>
+
+<!--  image-->
+<div id="imgHeader"></div>
+
+<!--  menu-->
+<div id="menu"></div>
+
+<!--grid-->
+<div id="content">
+  <div class="ui container">
+    <div class="ui grid">
+      <div class="ui sixteen column">
+        <div id="calendar"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../../js/kalender.js"></script>
+<script src="../../css/calendar-imports-long/calendar-long-1.css"></script>
+<script src="../../css/calendar-imports-long/calendar-long-2.css"></script>
+<script src="../../css/calendar-imports-long/calendar-long-3.js"></script>
+<script src="../../css/calendar-imports-long/calendar-long-4.js"></script>
+<script src="../../css/calendar-imports-long/calendar-long-5.js"></script>
+<script src="../../css/calendar-imports-long/calendar-long-6.js"></script>
+
+<!--  footer-->
+<div id="footer"></div>
+
+</body>
+</html>

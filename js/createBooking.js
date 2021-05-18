@@ -78,5 +78,5 @@ function gotData(data) {
 
 function populateSelect(data) {
   let element = document.getElementById('serviceDropdown');
-  element.innerHTML = element.innerHTML + '<option value="' + data.serviceId + '">' + data.serviceName + '</option>';
+  element.innerHTML = element.innerHTML + '<option value="' + data.serviceId + '">' + data.serviceName + " (" + data.serviceLength + " min. " + data.servicePrice + "kr )" + '</option>';
 }
