@@ -1,28 +1,47 @@
 const in1 = document.getElementById("serviceDropdown");
-const in2 = document.getElementById("customer");
-const in3 = document.getElementById("bookingDate");
-const in4 = document.getElementById("bookingTime");
-
+const in2 = document.getElementById("bookingDate");
+const in3 = document.getElementById("bookingTime");
+const in4 = document.getElementById("customerEmail");
+let customerId = 0
 
 const createBookingBtn = document.querySelector(".createBookingButton");
 createBookingBtn.onclick = function(){
+  getCustomerId()
+}
+
+//get customer id
+function getCustomerId() {
+  const customerEmailUrl = `http://localhost:8080/customers/email/${in4.value}`;
+  const customerEmailRequestOption = {
+    headers: {
+      "Content-type": 'application/json'
+    },
+    method: 'GET',
+    redirect: 'follow'
+  };
+
+  fetch(customerEmailUrl, customerEmailRequestOption)
+    .then(response => response.json())
+    .then(customerData => changeCustomerId(customerData));
+}
+
+function changeCustomerId(customerData) {
   postFunction({
     "serviceId": `${in1.value}`,
-    "customerId": `${in2.value}`,
-    "bookingDate": `${in3.value}`,
-    "bookingTime": `${in4.value + ":00"}`,
+    "bookingDate": `${in2.value}`,
+    "bookingTime": `${in3.value + ":00"}`,
+    "customerId": customerId = customerData.customerId
   });
 }
 
+//actual create booking function
 function postFunction(inputValue) {
   const bookingUrl = "http://localhost:8080/bookings/create";
-
-  let requestBody = JSON.stringify(inputValue);
+  let bookingRequestBody = JSON.stringify(inputValue);
 
   const bookingRequestOption = {
     method: 'POST',
-    body: requestBody,
-    // mode: 'no-cors',
+    body: bookingRequestBody,
     headers: {
       'Content-type': 'application/json',
       'Accept': 'application/json',
@@ -34,9 +53,8 @@ function postFunction(inputValue) {
 
   fetch(bookingUrl, bookingRequestOption)
     .then(response => response.json())
-    .catch(err => console.log(err))
-  console.log(requestBody)
 }
+
 
 
 //Get services list
