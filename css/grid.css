@@ -17,6 +17,17 @@
   padding: 0 20px;
 }
 
+#content-center{
+  display: grid;
+  width: 60%;
+  margin: 40px auto 100px;
+  justify-items: center;
+  grid-template-areas:
+    'main';
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+}
+
 #footer{
   display: grid;
   margin: auto;

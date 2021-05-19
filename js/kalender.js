@@ -1,9 +1,4 @@
-const bookingsUrl = "http://localhost:8080/bookings/all";
-const servicesUrl = "http://localhost:8080/services/all";
-const customersUrl = "http://localhost:8080/customers/all";
-
-let serviceName = "";
-let customerName = "";
+const calendarUrl = "http://localhost:8080/calendar/all";
 
 const requestOption = {
   headers: {
@@ -14,29 +9,32 @@ const requestOption = {
 };
 
 //rendering the calendar
-fetch(bookingsUrl, requestOption)
+fetch(calendarUrl, requestOption)
   .then(response => response.json())
-  .then(bookingsData => gotBookingData(bookingsData));
+  .then(data => gotData(data));
 
-function gotBookingData(data, serviceData) {
+function gotData(data) {
   data.forEach(addToArray)
-  serviceData.forEach(addToArray)
-
 }
 
-function addToArray(data, serviceData){
-  let id = data.bookingId
+function addToArray(data) {
+  let id = data.id
   let date = data.bookingDate
-  let title = serviceData.serviceName+"\n "+"Start tid: "+data.bookingTime.slice(0,5)
-  // let url = "../../HTML/booking-calendars/calendar-show-bookings.html"+`?${id}`
+  let title = data.customerName
+    + "\n Tlf: " + data.customerPhone
+    + "\n " + "Start tid: "
+    + data.bookingTime.slice(0, 5)
 
   $('#calendar').fullCalendar('renderEvent', {
     id: id,
     start: date,
     title: title,
-    // url: url,
-    textColor: "white",
-    allDay: true,
+    textColor: "black",
+    backgroundColor: "rgb(188, 202, 139)",
+    borderColor: "rgb(188, 202, 139)",
+    onmouseenter: function () {
+      alert("hej")
+    }
   }, true);
 }
 
@@ -51,20 +49,12 @@ $(document).ready(function() {
     },
     defaultDate: `${currentTime}`,
     navLinks: true,
-    editable: true,
     eventLimit: true,
+    weekNumbers: true,
     events: [
-    ]
+    ],
+
   });
 });
 
-//getting service name instead of id
-
-fetch(servicesUrl, requestOption)
-  .then(response => response.json())
-  .then(serviceData => gotBookingData(serviceData));
-
-function gotServiceData(serviceData) {
-  addToArray(serviceData)
-}
 

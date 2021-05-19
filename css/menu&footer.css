@@ -2,6 +2,7 @@
   /*sætter menuen fast i toppen af skærmen*/
   position: sticky;
   top: 0;
+  z-index: 5;
 
   /*background-color: rgb(196, 216, 180);*/
   background-color: rgb(188, 202, 139);
